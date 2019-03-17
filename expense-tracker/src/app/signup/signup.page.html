@@ -1,0 +1,39 @@
+<ion-content padding>
+  <div class="header">
+    <h2>Expense Tracker</h2>
+  </div>
+  <div class="login-form">
+    <ion-item>
+      <ion-label position="floating">Username or email</ion-label>
+      <ion-input [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="password" type="password"></ion-input>
+    </ion-item>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="10" style="margin-top:10px">
+          Do you have an account? <a routerLink="/login">Login</a>
+        </ion-col>
+        <ion-col size="2">
+          <ion-button class="login-btn" (click)="signup()">
+            <ion-icon name="arrow-round-forward"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+  <div class="firebase-login">
+    <ion-button expand="block" class="firebase-btn">Signup with Google</ion-button>
+    <ion-button expand="block" class="firebase-btn">Signup with Facebook</ion-button>
+  </div>
+
+</ion-content>

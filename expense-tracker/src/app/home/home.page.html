@@ -1,0 +1,47 @@
+
+  <ion-toolbar>
+    <ion-buttons color="primary" slot="start">
+      <ion-menu-button color="primary"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="balance-card">
+      <ion-col col-12 style="text-align:center">
+        <span class="balance-text">₹ 10000</span><br>
+        <span class="sub-text">Wallet Balance</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-card class="expense-card">
+    <ion-card-header>
+      <ion-card-subtitle>Total Expense</ion-card-subtitle>
+      <ion-card-title>Expense</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="expense-card">
+    <ion-card-header>
+      <ion-card-subtitle>Total Savings</ion-card-subtitle>
+      <ion-card-title>Savings</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/add-expense">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

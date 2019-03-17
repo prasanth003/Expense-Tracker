@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Expense</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="form-card">
+    <ion-item>
+      <ion-label>
+        <!-- <ion-icon name="calendar"></ion-icon>Date -->Select Date
+      </ion-label>
+      <ion-datetime displayFormat="MM DD YYYY" placeholder="MM DD YYYY"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Enter Amount" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Action Sheet</ion-label>
+      <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
+        <ion-select-option value="red">Red</ion-select-option>
+        <ion-select-option value="purple">Purple</ion-select-option>
+        <ion-select-option value="yellow">Yellow</ion-select-option>
+        <ion-select-option value="orange">Orange</ion-select-option>
+        <ion-select-option value="green">Green</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Source"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Action Sheet</ion-label>
+      <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
+        <ion-select-option value="red">Red</ion-select-option>
+        <ion-select-option value="purple">Purple</ion-select-option>
+        <ion-select-option value="yellow">Yellow</ion-select-option>
+        <ion-select-option value="orange">Orange</ion-select-option>
+        <ion-select-option value="green">Green</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Discription"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block">Add Expense</ion-button>
+
+  </ion-card>
+
+</ion-content>
