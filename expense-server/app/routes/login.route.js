@@ -1,6 +1,8 @@
-module.exports = (ap) => {
+module.exports = (app) => {
     const login = require('../controllers/login.controller.js');
 
-    ap.post('/login', login.create);
-
+    app.post('/login', function(req,res){
+        login.Create
+    });
+   
 }

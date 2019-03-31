@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { AddExpensePage } from './add-expense.page';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
   {
     path: '',
@@ -19,7 +21,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   declarations: [AddExpensePage]
 })

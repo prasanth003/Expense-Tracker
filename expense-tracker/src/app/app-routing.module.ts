@@ -17,7 +17,8 @@ const routes: Routes = [
   },
   { path: 'add-expense', loadChildren: './add-expense/add-expense.module#AddExpensePageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'signup', loadChildren: './signup/signup.module#SignupPageModule' }
+  { path: 'signup', loadChildren: './signup/signup.module#SignupPageModule' },
+  { path: 'view-expense', loadChildren: './view-expense/view-expense.module#ViewExpensePageModule' }
 ];
 
 @NgModule({

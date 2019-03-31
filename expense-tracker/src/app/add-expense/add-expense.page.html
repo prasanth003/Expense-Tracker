@@ -6,20 +6,22 @@
 
 <ion-content>
   <ion-card class="form-card">
+    <form [formGroup]="expenseForm" >
+      
     <ion-item>
       <ion-label>
-        <!-- <ion-icon name="calendar"></ion-icon>Date -->Select Date
+        Select Date
       </ion-label>
-      <ion-datetime displayFormat="MM DD YYYY" placeholder="MM DD YYYY"></ion-datetime>
+      <ion-datetime displayFormat="MM DD YYYY" placeholder="MM DD YYYY" formControlName="date"></ion-datetime>
     </ion-item>
 
     <ion-item>
-      <ion-input placeholder="Enter Amount" type="number"></ion-input>
+      <ion-input placeholder="Enter Amount" type="number" formControlName="amount"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label>Action Sheet</ion-label>
-      <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
+      <ion-label>Category</ion-label>
+      <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" formControlName="category" placeholder="Select One">
         <ion-select-option value="red">Red</ion-select-option>
         <ion-select-option value="purple">Purple</ion-select-option>
         <ion-select-option value="yellow">Yellow</ion-select-option>
@@ -29,26 +31,24 @@
     </ion-item>
 
     <ion-item>
-      <ion-input placeholder="Source"></ion-input>
+      <ion-input placeholder="Source" formControlName="source"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label>Action Sheet</ion-label>
-      <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
+      <ion-label>Transaction type</ion-label>
+      <ion-select [interfaceOptions]="customActionSheetOptions" formControlName="trType" interface="action-sheet" placeholder="Select One">
         <ion-select-option value="red">Red</ion-select-option>
         <ion-select-option value="purple">Purple</ion-select-option>
-        <ion-select-option value="yellow">Yellow</ion-select-option>
-        <ion-select-option value="orange">Orange</ion-select-option>
-        <ion-select-option value="green">Green</ion-select-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
-      <ion-input placeholder="Discription"></ion-input>
+      <ion-input placeholder="Description" formControlName="description"></ion-input>
     </ion-item>
 
-    <ion-button expand="block">Add Expense</ion-button>
+    <ion-button expand="block" (click)="setExpense()">Add Expense</ion-button>
 
+    </form>
   </ion-card>
 
 </ion-content>
