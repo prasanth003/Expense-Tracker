@@ -14,7 +14,7 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <a (click)="getExpense()">
+  <!-- <a (click)="getExpense()"> -->
     <ion-card class="expense-card">
       <ion-card-header>
         <ion-card-subtitle>Total Expense</ion-card-subtitle>
@@ -31,79 +31,22 @@
       </ion-card-header>
     
       <ion-card-content>
-        <span class="total-mon">₹ 200</span>
+        <canvas #lineCanvas></canvas>
+        <ion-button expand="block" color="primary" (click)="getExpense()">View Expenses</ion-button>
       </ion-card-content>
     </ion-card>
-  </a>
-  <ion-card class="expense-card">
+  <!-- </a> -->
+  <ion-card class="savings-card">
     <ion-card-header>
       <ion-card-subtitle>Total Savings</ion-card-subtitle>
       <ion-card-title>Savings</ion-card-title>
     </ion-card-header>
   
     <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      <canvas #lineCanvasSav></canvas>
+      <ion-button expand="block" color="secondary">View Savings</ion-button>
     </ion-card-content>
   </ion-card>
-  <div class="side-heading">
-    <span>Recent Expenses</span>
-  </div>
-  <ion-slides pager="true" [options]="slideOpts">
-    <ion-slide>
-      <ion-card class="expense-card">
-        <ion-card-header>
-          <ion-card-subtitle>Total Savings</ion-card-subtitle>
-          <ion-card-title>Savings</ion-card-title>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Keep close to Nature's heart... and break clear away, once in awhile,
-          and climb a mountain or spend a week in the woods. Wash your spirit clean.
-        </ion-card-content>
-      </ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card class="expense-card">
-        <ion-grid>
-          <ion-row>
-              <ion-col col-11>
-                </ion-col>
-                <ion-col col-1>
-                    <ion-badge class="date" color="primary">13 Mar 2019</ion-badge>
-                  </ion-col>
-          </ion-row>
-          
-        </ion-grid>
-      
-        <ion-card-content>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-8>
-                <span>Expense Amount</span>
-              </ion-col>
-              <ion-col col-4>
-                <span>₹ 200</span>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card class="expense-card">
-        <ion-card-header>
-          <ion-card-subtitle>Total Savings</ion-card-subtitle>
-          <ion-card-title>Savings</ion-card-title>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Keep close to Nature's heart... and break clear away, once in awhile,
-          and climb a mountain or spend a week in the woods. Wash your spirit clean.
-        </ion-card-content>
-      </ion-card>
-    </ion-slide>
-  </ion-slides>
   
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button routerLink="/add-expense">
