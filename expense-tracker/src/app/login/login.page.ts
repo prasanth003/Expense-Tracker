@@ -11,7 +11,8 @@ import { DataService } from '../data.service';
 export class LoginPage implements OnInit {
   username:string;
   password:string;
-  constructor( private service : DataService,private router : Router) { }
+  userData : any;
+  constructor( private service : DataService,private router : Router,private userService : CrendtialService) { }
 
   ngOnInit() {
     
@@ -20,10 +21,12 @@ export class LoginPage implements OnInit {
   login(){
     var user = "prasanth"
     var pass = "1234"
+    this.userData = this.userService.getUserDetails();
     if(this.username != null && this.password != null){
       if(this.username == user && this.password == pass){
-        // console.log('username and password',this.username,this.password)
-        // this.service.setUserDetails(this.username,this.password);
+        this.router.navigate(['home'])
+      }
+      else if(this.username === this.userData.username && this.password === this.userData.password){
         this.router.navigate(['home'])
       }
       else{

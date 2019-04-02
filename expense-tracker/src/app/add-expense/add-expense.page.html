@@ -22,11 +22,15 @@
     <ion-item>
       <ion-label>Category</ion-label>
       <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" formControlName="category" placeholder="Select One">
-        <ion-select-option value="red">Red</ion-select-option>
-        <ion-select-option value="purple">Purple</ion-select-option>
-        <ion-select-option value="yellow">Yellow</ion-select-option>
-        <ion-select-option value="orange">Orange</ion-select-option>
-        <ion-select-option value="green">Green</ion-select-option>
+          <ion-select-option value="food&groceries">Food & Groceries</ion-select-option>
+        <ion-select-option value="housing">Housing</ion-select-option>
+        <ion-select-option value="utilities">Utilities</ion-select-option>
+        <ion-select-option value="entertainment">Entertainment</ion-select-option>
+        <ion-select-option value="healthcare">Health Care</ion-select-option>
+        <ion-select-option value="personalcare">Personal Care</ion-select-option>
+        <ion-select-option value="shopping">Shopping</ion-select-option>
+        <ion-select-option value="travels">Travels</ion-select-option>
+        <ion-select-option value="others">Others</ion-select-option>
       </ion-select>
     </ion-item>
 
@@ -37,8 +41,10 @@
     <ion-item>
       <ion-label>Transaction type</ion-label>
       <ion-select [interfaceOptions]="customActionSheetOptions" formControlName="trType" interface="action-sheet" placeholder="Select One">
-        <ion-select-option value="red">Red</ion-select-option>
-        <ion-select-option value="purple">Purple</ion-select-option>
+        <ion-select-option value="card">Card</ion-select-option>
+        <ion-select-option value="cash">Cash</ion-select-option>
+        <ion-select-option value="others">Others</ion-select-option>
+
       </ion-select>
     </ion-item>
 

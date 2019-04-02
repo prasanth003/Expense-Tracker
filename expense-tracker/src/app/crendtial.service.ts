@@ -13,7 +13,11 @@ export class CrendtialService {
     this.userData.password = password;
     console.log('usedata',this.userData)
   }
-
+  registerUser(username,name,password){
+    this.userData.username = username;
+    this.userData.name     = name;
+    this.userData.password = password;
+  }
   getUserDetails(){
     return this.userData
   }

@@ -8,13 +8,31 @@
       </ion-header>
       <ion-content>
         <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
-              <ion-label>
-                {{p.title}}
-              </ion-label>
-            </ion-item>
+          <ion-menu-toggle auto-hide="false">
+            <a (click)="redirctToHome()">
+              <ion-item routerDirection="'root'">
+                <ion-icon slot="start" name="home"></ion-icon>
+                <ion-label>
+                  Home
+                </ion-label>
+              </ion-item>
+            </a>
+            <a (click)="redirctToList()">
+              <ion-item routerDirection="'root'">
+                <ion-icon slot="start" name="wallet"></ion-icon>
+                <ion-label>
+                  Wallet
+                </ion-label>
+              </ion-item>
+            </a>
+            <a (click)="redirctToLogout()">
+              <ion-item routerDirection="'root'">
+                <ion-icon slot="start" name="log-out"></ion-icon>
+                <ion-label>
+                  Logout
+                </ion-label>
+              </ion-item>
+            </a>            
           </ion-menu-toggle>
         </ion-list>
       </ion-content>

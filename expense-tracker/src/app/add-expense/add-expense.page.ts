@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { FormGroup, FormControl } from '@angular/forms';
+import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-add-expense',
   templateUrl: './add-expense.page.html',
@@ -17,13 +18,12 @@ export class AddExpensePage implements OnInit {
       description : new FormControl(''),  
     })
 
-  constructor(public service : DataService) { }
+  constructor(public service : DataService,private alertController : AlertController) { }
 
   ngOnInit() {
   }
   setExpense(){
-
-    console.log('form values are',this.expenseForm.value)
+    
     this.service.setExpense(this.expenseForm.value)
   }
 }

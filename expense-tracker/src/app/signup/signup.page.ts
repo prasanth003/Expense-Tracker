@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../data.service';
+import { CrendtialService } from '../crendtial.service';
 
 @Component({
   selector: 'app-signup',
@@ -11,14 +12,15 @@ export class SignupPage implements OnInit {
   username : string;
   name     : string;
   password : string;
-  constructor(private router : Router,private dataService : DataService) { }
+  constructor(private router : Router,private dataService : DataService,private userService : CrendtialService ) { }
 
   ngOnInit() {
   }
   
   signup(){
     if(this.username != null && this.name != null && this.password != null){
-      this.router.navigate(['home']);
+      this.router.navigate(['login']);
+      this.userService.registerUser(this.username,this.name,this.password);
     }
     else{
       this.dataService.loginAlert();

@@ -6,6 +6,14 @@
   </ion-toolbar>
 
 <ion-content>
+        <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+          <ion-refresher-content
+            pullingIcon="arrow-dropdown"
+            pullingText="Pull to refresh"
+            refreshingSpinner="circles"
+            refreshingText="Refreshing...">
+          </ion-refresher-content>
+        </ion-refresher>
   <ion-grid>
     <ion-row class="balance-card">
       <ion-col col-12 style="text-align:center">
